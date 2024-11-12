@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Template</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: grid;
+            grid-template-areas:
+                "header"
+                "menu"
+                "hero"
+                "main"
+                "banner"
+                "extra"
+                "image";
+            grid-gap: 10px;
+        }
+        .header { grid-area: header; background: #2c3e50; color: white; padding: 20px; text-align: center; }
+        .menu { grid-area: menu; background: #e74c3c; color: white; padding: 20px; text-align: center; }
+        .hero { grid-area: hero; background: #3498db; color: white; padding: 20px; text-align: center; }
+        .main { grid-area: main; background: #34495e; color: white; padding: 20px; text-align: center; }
+        .banner { grid-area: banner; background: #f1c40f; color: white; padding: 20px; text-align: center; }
+        .extra { grid-area: extra; background: #1abc9c; color: white; padding: 20px; text-align: center; }
+        .image { grid-area: image; background: #ecf0f1; color: black; padding: 20px; text-align: center; }
+
+        @media (min-width: 600px) {
+            .container {
+                grid-template-areas:
+                    "header header"
+                    "hero hero"
+                    "menu main"
+                    "banner banner"
+                    "extra image";
+            }
+        }
+
+        @media (min-width: 900px) {
+            .container {
+                grid-template-areas:
+                    "header menu"
+                    "hero hero"
+                    "main image"
+                    "banner banner"
+                    "extra extra";
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">HEADER</div>
+        <div class="menu">MENU</div>
+        <div class="hero">HERO</div>
+        <div class="main">MAIN</div>
+        <div class="banner">BANNER</div>
+        <div class="extra">EXTRA</div>
+        <div class="image">IMAGE</div>
+    </div>
+</body>
+</html>
